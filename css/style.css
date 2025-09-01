@@ -1,6 +1,5 @@
 .wrapper {
   width: 1100px;
-  height: 50vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -8,6 +7,14 @@
   background: #acb3b2;
   overflow: hidden;
 }
+
+.red    { background: #ff0000; }
+.blue   { background: #0008ff; }
+.orange { background: #ff8400; }
+.green  { background: #00ff51; }
+.yellow { background: #d4ff00; }
+.pink   { background: #ff00e1; }
+
 
 /*q1 */
 .box-1 {
@@ -70,36 +77,30 @@
   display: inline-block;
 }
 
+.container-2::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .box-4 {
   width: 300px;
   height: 300px;
   float: left;
-  margin: 0 auto;
-}
-
-.red {
-  background: #ff0000;
-}
-
-.blue {
-  background: #0008ff;
 }
 
 @media screen and (max-width: 960px) {
   .box-4 {
     float: none;
-    display: block;
     margin: 0 auto;
   }
 }
-
 /*q5 */
 
 .container-3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .box-5 {
@@ -111,19 +112,6 @@
   font-size: 20px;
   font-weight: bold;
   color: #000;
-}
-
-
-.red-5 {
-  background: #ff0000;
-}
-
-.blue-5 {
-  background: #0008ff;
-}
-
-.orange-5 {
-  background: #ff8400;
 }
 
 @media screen and (max-width: 960px) {
@@ -152,29 +140,14 @@
   color: #000;
 }
 
-.green6 {
-  background: #00ff51;
-  order: 1;
-}
-
-.yellow6 {
-  background: #d4ff00;
-  order: 2;
-}
-
-.pink6 {
-  background: #ff00e1;
-  order: 3;
-}
-
 @media screen and (max-width: 960px) {
-  .green6 {
+  .green {
     order: 2;
   }
-  .yellow6 {
+  .yellow {
     order: 3;
   }
-  .pink6 {
+  .pink {
     order: 1;
   }
 }
@@ -183,36 +156,19 @@
 
 .container-5 {
   display: flex;
-  gap: 0;
 }
 
-.box-7red {
+.box-7-1,
+.box-7-2,
+.box-7-3 {
   width: 300px;
   height: 300px;
-  background: #ff0000;
-  display: block;
 }
-
-.box-7blue {
-  width: 300px;
-  height: 300px;
-  background: #0008ff;
-  display: none;
-}
-
-.box-7green {
-  width: 300px;
-  height: 300px;
-  background: #00ff51;
-  display: block;
-}
-
+.box-7-1 { display: block; }
+.box-7-2 { display: none; }
+.box-7-3 { display: block; }
 
 @media (max-width: 960px) {
-  .box-7red {
-    display: none;
-  }
-  .box-7blue {
-    display: block;
-  }
+  .box-7-1 { display: none; }
+  .box-7-2 { display: block; }
 }
